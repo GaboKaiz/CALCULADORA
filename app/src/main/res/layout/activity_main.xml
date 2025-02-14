@@ -1,0 +1,100 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center">
+
+    <!-- Logo arriba -->
+    <ImageView
+        android:id="@+id/logoPirata"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:contentDescription="Logo de la Calculadora Pirata"
+        android:src="@drawable/pinguino" />
+
+    <!-- Nombre de la calculadora -->
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CALCULADORA PIRATA"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingTop="8dp" />
+
+    <!-- Resultado -->
+    <TextView
+        android:id="@+id/txtResultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/design_default_color_error"
+        android:gravity="center"
+        android:padding="8dp"
+        android:textSize="24sp" />
+
+    <!-- Entrada de números -->
+    <EditText
+        android:id="@+id/edtNumero1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Número 1"
+        android:inputType="numberDecimal"/>
+
+    <EditText
+        android:id="@+id/edtNumero2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Número 2"
+        android:inputType="numberDecimal"/>
+
+    <!-- Botones de operaciones -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnSumar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"/>
+
+        <Button
+            android:id="@+id/btnRestar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"/>
+
+        <Button
+            android:id="@+id/btnMultiplicar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*"/>
+
+        <Button
+            android:id="@+id/btnDividir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"/>
+    </LinearLayout>
+
+    <!-- Botón para borrar chat -->
+
+    <Button
+        android:id="@+id/btnBorrarChat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Borrar Chat" />
+
+    <Button
+        android:id="@+id/btnCalCuladoraCientifica"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Calculadora Científica" />
+
+</LinearLayout>

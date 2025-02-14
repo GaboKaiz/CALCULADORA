@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center">
+
+    <!-- Logo arriba -->
+    <ImageView
+        android:id="@+id/logoPirata"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:contentDescription="Logo de la Calculadora Pirata"
+        android:src="@drawable/pinguino" />
+
+    <!-- Nombre de la calculadora -->
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CALCULADORA CIENTÍFICA"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingTop="8dp" />
+    <!-- Pantalla de la calculadora -->
+    <EditText
+        android:id="@+id/txtDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="none"
+        android:textSize="24sp"
+        android:gravity="end"
+        android:padding="10dp"
+        android:background="@android:color/darker_gray"
+        android:textColor="@android:color/white"
+        android:focusable="false" />
+
+    <!-- Botones de la calculadora -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="4"
+        android:paddingTop="20dp">
+
+        <!-- Fila 1 -->
+        <Button android:text="7" android:onClick="onDigitClick"/>
+        <Button android:text="8" android:onClick="onDigitClick"/>
+        <Button android:text="9" android:onClick="onDigitClick"/>
+        <Button android:text="/" android:onClick="onOperatorClick"/>
+
+        <!-- Fila 2 -->
+        <Button android:text="4" android:onClick="onDigitClick"/>
+        <Button android:text="5" android:onClick="onDigitClick"/>
+        <Button android:text="6" android:onClick="onDigitClick"/>
+        <Button android:text="*" android:onClick="onOperatorClick"/>
+
+        <!-- Fila 3 -->
+        <Button android:text="1" android:onClick="onDigitClick"/>
+        <Button android:text="2" android:onClick="onDigitClick"/>
+        <Button android:text="3" android:onClick="onDigitClick"/>
+        <Button android:text="-" android:onClick="onOperatorClick"/>
+
+        <!-- Fila 4 -->
+        <Button android:text="0" android:onClick="onDigitClick"/>
+        <Button android:text="." android:onClick="onDigitClick"/>
+        <Button android:text="C" android:onClick="onClearClick"/>
+        <Button android:text="+" android:onClick="onOperatorClick"/>
+
+        <!-- Fila 5 -->
+        <Button android:text="sin" android:onClick="onFunctionClick"/>
+        <Button android:text="cos" android:onClick="onFunctionClick"/>
+        <Button android:text="tan" android:onClick="onFunctionClick"/>
+        <Button android:text="√" android:onClick="onFunctionClick"/>
+
+        <!-- Fila 6 -->
+        <Button android:text="^" android:onClick="onOperatorClick"/>
+        <Button android:text="(" android:onClick="onDigitClick"/>
+        <Button android:text=")" android:onClick="onDigitClick"/>
+        <Button android:text="=" android:onClick="onEqualClick"/>
+
+    </GridLayout>
+    <Button
+        android:id="@+id/buttonRetroceder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_marginLeft="20dp"
+        android:backgroundTint="#548521"
+        android:text="Retroceder" />
+</LinearLayout>
